@@ -1,0 +1,47 @@
+{
+  "groups": [
+    {
+      "name": "jwt",
+      "type": "com.blogi.config.JwtProperties",
+      "sourceType": "com.blogi.config.JwtProperties"
+    }
+  ],
+  "properties": [
+    {
+      "name": "azure.openai.api-version",
+      "type": "java.lang.String",
+      "description": "Azure OpenAI API version, e.g., 2025-01-01-preview"
+    },
+    {
+      "name": "azure.openai.deployment",
+      "type": "java.lang.String",
+      "description": "Azure OpenAI deployment name, e.g., gpt-4o"
+    },
+    {
+      "name": "azure.openai.endpoint",
+      "type": "java.lang.String",
+      "description": "Azure OpenAI endpoint, e.g., https:\/\/<resource>.openai.azure.com"
+    },
+    {
+      "name": "azure.openai.key",
+      "type": "java.lang.String",
+      "description": "Azure OpenAI API key."
+    },
+    {
+      "name": "jwt.expiration-ms",
+      "type": "java.lang.Long",
+      "description": "JWT expiration time in milliseconds.",
+      "sourceType": "com.blogi.config.JwtProperties"
+    },
+    {
+      "name": "jwt.secret",
+      "type": "java.lang.String",
+      "description": "HMAC secret for signing JWT tokens (HS256).",
+      "sourceType": "com.blogi.config.JwtProperties"
+    }
+  ],
+  "hints": [],
+  "ignored": {
+    "properties": []
+  }
+}

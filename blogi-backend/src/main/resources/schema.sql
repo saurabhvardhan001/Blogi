@@ -1,0 +1,1 @@
+CREATE TABLE IF NOT EXISTS placeholder_init (id INT PRIMARY KEY);
