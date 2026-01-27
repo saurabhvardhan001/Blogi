@@ -137,6 +137,6 @@ Submit a PR with a clear description and screenshots
 
 
 📄 License
-MIT — see LICENSE for details.
+Not required.
 
 Happy blogging with Blogi!
