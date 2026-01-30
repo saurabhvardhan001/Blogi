@@ -1,142 +1,223 @@
-                 Blogi — AI‑Powered Blog Generator
-Generate SEO‑optimized, Markdown‑formatted blog posts from a simple brief.
-Backend: Spring Boot (Java 17), MySQL, JWT · Frontend: React + Vite + Material UI · AI: Azure OpenAI (REST)
+# Blogi — AI-Powered Blog Generator
 
-✨ Features
+Generate **SEO-optimized, Markdown-formatted blog posts** from a simple brief.
 
-AI generation using Azure OpenAI (topic, keywords, tone, audience, length)
-SEO helpers: meta title/description, readability & keyword utilization scoring
-Clean UX: Markdown preview, meta sidebar, skeleton loaders, snackbars
-Tools: copy to clipboard, export as Markdown, view history
-Security: JWT auth (register/login), BCrypt password hashing
+**Backend:** Spring Boot (Java 17), MySQL, JWT  
+**Frontend:** React + Vite + Material UI  
+**AI:** Azure OpenAI (REST)
 
+---
 
-🧱 Tech Stack
+## ✨ Features
 
-Backend: Java 17, Spring Boot 3.5.x, Web, Security (JWT), Data JPA, Validation, WebFlux (WebClient)
-Database: MySQL 8+ (Connector/J)
-Frontend: React 18, Vite 5, Material UI, Axios, react‑markdown (+ GFM), rehype‑sanitize, syntax highlighting
-Auth: JWT (JJWT 0.11.5)
+- **AI blog generation** using Azure OpenAI  
+  - Inputs: topic, keywords, tone, audience, length
+- **SEO helpers**
+  - Meta title & description
+  - Readability score
+  - Keyword utilization scoring
+- **Clean UX**
+  - Live Markdown preview
+  - Meta sidebar
+  - Skeleton loaders
+  - Snackbars
+- **Productivity tools**
+  - Copy to clipboard
+  - Export as Markdown
+  - View generation history
+- **Security**
+  - JWT authentication (register/login)
+  - BCrypt password hashing
 
+---
 
-📁 Project Structure
+## 🧱 Tech Stack
+
+### Backend
+- Java 17
+- Spring Boot 3.5.x
+- Spring Web
+- Spring Security (JWT)
+- Spring Data JPA
+- Spring Validation
+- Spring WebFlux (`WebClient`)
+- MySQL 8+
+- JJWT 0.11.5
+
+### Frontend
+- React 18
+- Vite 5
+- Material UI
+- Axios
+- `react-markdown` (+ GFM)
+- `rehype-sanitize`
+- Syntax highlighting
+
+---
+
+## 📁 Project Structure
+
+```
 /blogi-backend
-  ├─ src/main/java/com/blogi
-  │  ├─ BlogiApplication.java
-  │  ├─ config/            (SecurityConfig, JwtProperties)
-  │  ├─ controller/        (AuthController, BlogController)
-  │  ├─ dto/               (AuthRequest, LoginRequest, GenerateRequest, BlogResponse, AuthResponse)
-  │  ├─ entity/            (User, BlogPost)
-  │  ├─ exception/         (GlobalExceptionHandler + custom exceptions)
-  │  ├─ repository/        (UserRepository, BlogRepository)
-  │  ├─ security/          (JwtService, JwtAuthFilter, AppUserDetailsService)
-  │  └─ service/           (AuthService, BlogService, OpenAIService, SeoService, PlagiarismService)
-  └─ src/main/resources/   (application.properties)
+ ├─ src/main/java/com/blogi
+ │  ├─ BlogiApplication.java
+ │  ├─ config/
+ │  │   ├─ SecurityConfig.java
+ │  │   └─ JwtProperties.java
+ │  ├─ controller/
+ │  │   ├─ AuthController.java
+ │  │   └─ BlogController.java
+ │  ├─ dto/
+ │  │   ├─ AuthRequest.java
+ │  │   ├─ LoginRequest.java
+ │  │   ├─ GenerateRequest.java
+ │  │   ├─ BlogResponse.java
+ │  │   └─ AuthResponse.java
+ │  ├─ entity/
+ │  │   ├─ User.java
+ │  │   └─ BlogPost.java
+ │  ├─ exception/
+ │  │   ├─ GlobalExceptionHandler.java
+ │  │   └─ CustomExceptions.java
+ │  ├─ repository/
+ │  │   ├─ UserRepository.java
+ │  │   └─ BlogRepository.java
+ │  ├─ security/
+ │  │   ├─ JwtService.java
+ │  │   ├─ JwtAuthFilter.java
+ │  │   └─ AppUserDetailsService.java
+ │  └─ service/
+ │      ├─ AuthService.java
+ │      ├─ BlogService.java
+ │      ├─ OpenAIService.java
+ │      ├─ SeoService.java
+ │      └─ PlagiarismService.java
+ └─ src/main/resources
+    └─ application.properties
 
 /blogi-frontend
-  └─ src
-     ├─ services/api.js    (Axios + JWT interceptor)
-     └─ ui/
-        ├─ App.jsx, Login.jsx, Register.jsx, Editor.jsx, History.jsx
-        └─ components/     (MarkdownRenderer, MetaSidebar, ScorePill, BlogCard)
+ └─ src
+    ├─ services/
+    │  └─ api.js
+    ├─ ui/
+    │  ├─ App.jsx
+    │  ├─ Login.jsx
+    │  ├─ Register.jsx
+    │  ├─ Editor.jsx
+    │  └─ History.jsx
+    └─ components/
+       ├─ MarkdownRenderer.jsx
+       ├─ MetaSidebar.jsx
+       ├─ ScorePill.jsx
+       └─ BlogCard.jsx
+```
 
+---
 
-⚙️ Configuration
-Backend — blogi-backend/src/main/resources/application.properties
+## ⚙️ Configuration
 
+### Backend
 
-🔐 Tip: Use env vars instead of committing secrets:
-azure.openai.key=${AZURE_OPENAI_KEY:} and set AZURE_OPENAI_KEY in your shell/CI.
+`blogi-backend/src/main/resources/application.properties`
 
-Frontend — blogi-frontend/.env
+```properties
+spring.datasource.url=jdbc:mysql://localhost:3306/blogi
+spring.datasource.username=YOUR_DB_USERNAME
+spring.datasource.password=YOUR_DB_PASSWORD
 
+azure.openai.endpoint=${AZURE_OPENAI_ENDPOINT:}
+azure.openai.key=${AZURE_OPENAI_KEY:}
+azure.openai.deployment=${AZURE_OPENAI_DEPLOYMENT:}
+azure.openai.api-version=2024-02-15-preview
 
-🗃️ Database
-Create the DB once:
+jwt.secret=${JWT_SECRET:}
+jwt.expiration=86400000
+```
 
-Update spring.datasource.username/password accordingly.
+🔐 **Tip:** Use environment variables instead of committing secrets.
 
-🚀 Run Locally
-Backend
+---
 
-Frontend
+### Frontend
 
-Open http://localhost:5173.
+`blogi-frontend/.env`
 
-🔐 Auth Flow
+```env
+VITE_API_BASE_URL=http://localhost:8080/api
+```
 
-Register at /api/auth/register (username, email, password) → returns JWT
-Login at /api/auth/login (username, password) → returns JWT
-Frontend stores JWT in localStorage and attaches Authorization: Bearer <token> automatically.
+---
 
+## 🗃️ Database Setup
 
-📡 API (for Postman)
-Register
-POST /api/auth/register
+```sql
+CREATE DATABASE blogi;
+```
 
-Login
-POST /api/auth/login
+---
 
-Generate Blog (requires JWT)
-POST /api/blog/generate
+## 🚀 Run Locally
 
-List Blogs (requires JWT)
-GET /api/blog
-Get Blog by ID (requires JWT)
-GET /api/blog/{id}
+### Backend
 
-A Postman collection can be added at blogi-backend/postman-collection.json.
+```bash
+cd blogi-backend
+./mvnw spring-boot:run
+```
 
+### Frontend
 
-🖥️ Frontend UX Highlights
+```bash
+cd blogi-frontend
+npm install
+npm run dev
+```
 
-Editor: form (topic/keywords/tone/audience/length) + live reading pane with Markdown
-Meta sidebar: meta title/description, scores (readability/SEO), keywords as chips, quick actions (copy/export/share)
-History: card/grid view with preview dialog
-UX niceties: skeleton loaders, snackbars, syntax-highlighted code blocks
+Open http://localhost:5173
 
+---
 
-🧪 Troubleshooting
+## 🔐 Auth Flow
 
-403/401 on /api/blog/*
+- Register: `POST /api/auth/register`
+- Login: `POST /api/auth/login`
+- JWT stored in `localStorage`
+- Sent as `Authorization: Bearer <token>`
 
-Register/login first; ensure JWT is present in Authorization header.
+---
 
+## 📡 API Endpoints
 
-“Generation failed”
+- `POST /api/auth/register`
+- `POST /api/auth/login`
+- `POST /api/blog/generate`
+- `GET /api/blog`
+- `GET /api/blog/{id}`
 
-Check Azure OpenAI credentials (key/endpoint/deployment/api-version).
-For demo, add a fallback in OpenAIService.generateBlog() to return sample content if API fails.
+---
 
+## 🗺️ Roadmap
 
-IDE warnings about custom properties
+- Outline-first mode
+- Rich editor & post-edit
+- Image suggestions
+- Fact-check & citations
+- WordPress/Medium publishing
+- Docker Compose & Flyway
 
-Ensure spring-boot-configuration-processor is in pom.xml.
-Optional: add META-INF/additional-spring-configuration-metadata.json.
+---
 
+## 🤝 Contributing
 
+Fork → Feature branch → PR with description & screenshots
 
+---
 
-🗺️ Roadmap
+## 📄 License
 
-Outline‑first mode; section expand
-Rich editor to post‑edit + save
-Image suggestions (Unsplash/Pexels/Azure Images)
-Fact‑check & citations
-Publish to WordPress/Medium
-Email verification & password reset
-Rate‑limiting & CAPTCHA on auth
-Docker Compose & Flyway migrations
-
-
-🤝 Contributing
-
-Fork & create a feature branch
-Follow Java 17 + Spring Boot 3.5.x and ESLint/Prettier conventions
-Submit a PR with a clear description and screenshots
-
-
-📄 License
 Not required.
 
-Happy blogging with Blogi!
+---
+
+**Happy blogging with Blogi! 🚀**
+
