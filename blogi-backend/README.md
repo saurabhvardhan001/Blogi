@@ -5,7 +5,7 @@ A full-stack app (Spring Boot + MySQL + React) that generates SEO-optimized blog
 ## Backend (Spring Boot)
 
 ### Build & Run
-1. Create MySQL DB `smartops_db` and update credentials in `src/main/resources/application.properties`.
+1. Create MySQL DB `blogi` and update credentials in `src/main/resources/application.properties`.
 2. Set environment variables (recommended):
    ```bash
    export AZURE_OPENAI_KEY=YOUR_KEY
