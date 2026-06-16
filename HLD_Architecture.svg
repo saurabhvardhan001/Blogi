@@ -1,0 +1,284 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 800">
+  <!-- Title -->
+  <text x="600" y="30" font-size="28" font-weight="bold" text-anchor="middle" fill="#333">
+    Blogi - High-Level Design (HLD)
+  </text>
+
+  <!-- Client Layer -->
+  <rect x="50" y="80" width="300" height="120" fill="#E3F2FD" stroke="#1976D2" stroke-width="2" rx="5"/>
+  <text x="200" y="105" font-size="16" font-weight="bold" text-anchor="middle" fill="#1565C0">
+    Frontend Client
+  </text>
+  <text x="200" y="130" font-size="12" text-anchor="middle" fill="#333">
+    React + Vite + MUI
+  </text>
+  <text x="200" y="150" font-size="11" text-anchor="middle" fill="#555">
+    Browser (Port 5173)
+  </text>
+  <text x="200" y="165" font-size="11" text-anchor="middle" fill="#555">
+    Login | Register | Editor | History
+  </text>
+
+  <!-- API Gateway / REST Layer -->
+  <rect x="450" y="80" width="300" height="120" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2" rx="5"/>
+  <text x="600" y="105" font-size="16" font-weight="bold" text-anchor="middle" fill="#6A1B9A">
+    REST API Layer
+  </text>
+  <text x="600" y="130" font-size="12" text-anchor="middle" fill="#333">
+    Spring Boot (Port 8080)
+  </text>
+  <text x="600" y="150" font-size="11" text-anchor="middle" fill="#555">
+    /api/auth/* | /api/blog/*
+  </text>
+  <text x="600" y="165" font-size="11" text-anchor="middle" fill="#555">
+    CORS Enabled
+  </text>
+
+  <!-- External Service -->
+  <rect x="850" y="80" width="300" height="120" fill="#FFF3E0" stroke="#E65100" stroke-width="2" rx="5"/>
+  <text x="1000" y="105" font-size="16" font-weight="bold" text-anchor="middle" fill="#E65100">
+    External Service
+  </text>
+  <text x="1000" y="130" font-size="12" text-anchor="middle" fill="#333">
+    Azure OpenAI
+  </text>
+  <text x="1000" y="150" font-size="11" text-anchor="middle" fill="#555">
+    Chat API Endpoint
+  </text>
+  <text x="1000" y="165" font-size="11" text-anchor="middle" fill="#555">
+    REST (WebClient)
+  </text>
+
+  <!-- Business Logic Layer -->
+  <g>
+    <!-- Auth Service -->
+    <rect x="50" y="280" width="220" height="100" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+    <text x="160" y="305" font-size="14" font-weight="bold" text-anchor="middle" fill="#1B5E20">
+      Auth Service
+    </text>
+    <text x="160" y="325" font-size="10" text-anchor="middle" fill="#555">
+      Register | Login
+    </text>
+    <text x="160" y="340" font-size="10" text-anchor="middle" fill="#555">
+      JWT Token Generation
+    </text>
+    <text x="160" y="355" font-size="10" text-anchor="middle" fill="#555">
+      BCrypt Password Hashing
+    </text>
+    <text x="160" y="370" font-size="10" text-anchor="middle" fill="#555">
+      Role Management
+    </text>
+  </g>
+
+  <g>
+    <!-- Blog Service -->
+    <rect x="320" y="280" width="220" height="100" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+    <text x="430" y="305" font-size="14" font-weight="bold" text-anchor="middle" fill="#1B5E20">
+      Blog Service
+    </text>
+    <text x="430" y="325" font-size="10" text-anchor="middle" fill="#555">
+      Generate & Save
+    </text>
+    <text x="430" y="340" font-size="10" text-anchor="middle" fill="#555">
+      Prompt Building
+    </text>
+    <text x="430" y="355" font-size="10" text-anchor="middle" fill="#555">
+      Content Orchestration
+    </text>
+    <text x="430" y="370" font-size="10" text-anchor="middle" fill="#555">
+      List/Retrieve Posts
+    </text>
+  </g>
+
+  <g>
+    <!-- SEO & Scoring Service -->
+    <rect x="590" y="280" width="220" height="100" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+    <text x="700" y="305" font-size="14" font-weight="bold" text-anchor="middle" fill="#1B5E20">
+      SEO & Scoring
+    </text>
+    <text x="700" y="325" font-size="10" text-anchor="middle" fill="#555">
+      Readability Score
+    </text>
+    <text x="700" y="340" font-size="10" text-anchor="middle" fill="#555">
+      SEO Score (Keywords)
+    </text>
+    <text x="700" y="355" font-size="10" text-anchor="middle" fill="#555">
+      Meta Description
+    </text>
+    <text x="700" y="370" font-size="10" text-anchor="middle" fill="#555">
+      Plagiarism Score
+    </text>
+  </g>
+
+  <g>
+    <!-- OpenAI Integration -->
+    <rect x="860" y="280" width="220" height="100" fill="#E8F5E9" stroke="#388E3C" stroke-width="2" rx="5"/>
+    <text x="970" y="305" font-size="14" font-weight="bold" text-anchor="middle" fill="#1B5E20">
+      OpenAI Service
+    </text>
+    <text x="970" y="325" font-size="10" text-anchor="middle" fill="#555">
+      WebClient Integration
+    </text>
+    <text x="970" y="340" font-size="10" text-anchor="middle" fill="#555">
+      Blog Content Generation
+    </text>
+    <text x="970" y="355" font-size="10" text-anchor="middle" fill="#555">
+      Error Handling
+    </text>
+    <text x="970" y="370" font-size="10" text-anchor="middle" fill="#555">
+      Response Parsing
+    </text>
+  </g>
+
+  <!-- Database Layer -->
+  <g>
+    <!-- MySQL Database -->
+    <rect x="50" y="500" width="400" height="150" fill="#FCE4EC" stroke="#C2185B" stroke-width="2" rx="5"/>
+    <text x="250" y="530" font-size="16" font-weight="bold" text-anchor="middle" fill="#880E4F">
+      MySQL Database (Port 3306)
+    </text>
+    
+    <!-- Table 1 -->
+    <rect x="70" y="545" width="170" height="95" fill="#F8BBD0" stroke="#C2185B" stroke-width="1" rx="3"/>
+    <text x="155" y="565" font-size="12" font-weight="bold" text-anchor="middle" fill="#880E4F">
+      users
+    </text>
+    <text x="155" y="580" font-size="9" text-anchor="middle" fill="#555">
+      id | username | email
+    </text>
+    <text x="155" y="592" font-size="9" text-anchor="middle" fill="#555">
+      password | roles
+    </text>
+    <text x="155" y="604" font-size="9" text-anchor="middle" fill="#555">
+      (PK: id)
+    </text>
+    <text x="155" y="616" font-size="9" text-anchor="middle" fill="#555">
+      (1-N relation)
+    </text>
+    <text x="155" y="628" font-size="9" text-anchor="middle" fill="#555">
+      Unique: username, email
+    </text>
+
+    <!-- Table 2 -->
+    <rect x="250" y="545" width="180" height="95" fill="#F8BBD0" stroke="#C2185B" stroke-width="1" rx="3"/>
+    <text x="340" y="565" font-size="12" font-weight="bold" text-anchor="middle" fill="#880E4F">
+      blog_posts
+    </text>
+    <text x="340" y="580" font-size="9" text-anchor="middle" fill="#555">
+      id | title | content
+    </text>
+    <text x="340" y="592" font-size="9" text-anchor="middle" fill="#555">
+      metaTitle | metaDescription
+    </text>
+    <text x="340" y="604" font-size="9" text-anchor="middle" fill="#555">
+      readabilityScore | seoScore
+    </text>
+    <text x="340" y="616" font-size="9" text-anchor="middle" fill="#555">
+      plagiarismScore | author_id
+    </text>
+    <text x="340" y="628" font-size="9" text-anchor="middle" fill="#555">
+      (FK: author_id → users.id)
+    </text>
+  </g>
+
+  <!-- Security Layer -->
+  <rect x="500" y="500" width="350" height="150" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2" rx="5"/>
+  <text x="675" y="530" font-size="16" font-weight="bold" text-anchor="middle" fill="#6A1B9A">
+    Security Layer
+  </text>
+  
+  <g>
+    <rect x="520" y="545" width="150" height="90" fill="#E1BEE7" stroke="#7B1FA2" stroke-width="1" rx="3"/>
+    <text x="595" y="565" font-size="12" font-weight="bold" text-anchor="middle" fill="#6A1B9A">
+      JWT Service
+    </text>
+    <text x="595" y="580" font-size="9" text-anchor="middle" fill="#555">
+      Generate Token
+    </text>
+    <text x="595" y="592" font-size="9" text-anchor="middle" fill="#555">
+      Validate Token
+    </text>
+    <text x="595" y="604" font-size="9" text-anchor="middle" fill="#555">
+      Extract Username
+    </text>
+    <text x="595" y="616" font-size="9" text-anchor="middle" fill="#555">
+      Secret Key: env var
+    </text>
+    <text x="595" y="628" font-size="9" text-anchor="middle" fill="#555">
+      Version: JJWT 0.11.5
+    </text>
+  </g>
+
+  <g>
+    <rect x="680" y="545" width="150" height="90" fill="#E1BEE7" stroke="#7B1FA2" stroke-width="1" rx="3"/>
+    <text x="755" y="565" font-size="12" font-weight="bold" text-anchor="middle" fill="#6A1B9A">
+      JWT Filter
+    </text>
+    <text x="755" y="580" font-size="9" text-anchor="middle" fill="#555">
+      Request Interceptor
+    </text>
+    <text x="755" y="592" font-size="9" text-anchor="middle" fill="#555">
+      Bearer Token Extract
+    </text>
+    <text x="755" y="604" font-size="9" text-anchor="middle" fill="#555">
+      Authentication Setup
+    </text>
+    <text x="755" y="616" font-size="9" text-anchor="middle" fill="#555">
+      Bypass /auth/* paths
+    </text>
+    <text x="755" y="628" font-size="9" text-anchor="middle" fill="#555">
+      Stateless (CSRF disabled)
+    </text>
+  </g>
+
+  <!-- Data Flow Arrows -->
+  <!-- Client to API -->
+  <path d="M 350 140 L 450 140" stroke="#1976D2" stroke-width="2" fill="none" marker-end="url(#arrowBlue)"/>
+  <text x="400" y="130" font-size="10" fill="#1976D2" font-weight="bold">HTTP/REST</text>
+
+  <!-- API to Auth Service -->
+  <path d="M 450 200 L 160 280" stroke="#388E3C" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  
+  <!-- API to Blog Service -->
+  <path d="M 550 200 L 430 280" stroke="#388E3C" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+  
+  <!-- API to OpenAI Service -->
+  <path d="M 750 200 L 970 280" stroke="#E65100" stroke-width="2" fill="none" marker-end="url(#arrowOrange)"/>
+  
+  <!-- OpenAI Service to External API -->
+  <path d="M 1000 380 L 1000 80" stroke="#E65100" stroke-width="2" fill="none" marker-end="url(#arrowOrange)" stroke-dasharray="5,5"/>
+  <text x="1020" y="230" font-size="10" fill="#E65100" font-weight="bold">WebClient</text>
+
+  <!-- Blog Service to SEO Service -->
+  <path d="M 540 330 L 590 330" stroke="#388E3C" stroke-width="2" fill="none" marker-end="url(#arrowGreen)"/>
+
+  <!-- Services to Database -->
+  <path d="M 160 380 L 180 500" stroke="#C2185B" stroke-width="2" fill="none" marker-end="url(#arrowPink)"/>
+  <path d="M 430 380 L 340 500" stroke="#C2185B" stroke-width="2" fill="none" marker-end="url(#arrowPink)"/>
+
+  <!-- Services to Security -->
+  <path d="M 750 380 L 700 500" stroke="#7B1FA2" stroke-width="2" fill="none" marker-end="url(#arrowPurple)"/>
+
+  <!-- Arrow markers -->
+  <defs>
+    <marker id="arrowBlue" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1976D2" />
+    </marker>
+    <marker id="arrowGreen" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#388E3C" />
+    </marker>
+    <marker id="arrowOrange" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#E65100" />
+    </marker>
+    <marker id="arrowPink" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#C2185B" />
+    </marker>
+    <marker id="arrowPurple" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#7B1FA2" />
+    </marker>
+  </defs>
+
+  <!-- Legend -->
+  <text x="50" y="740" font-size="12" font-weight="bold" fill="#333">Key Technologies:</text>
+  <text x="50" y="765" font-size="10" fill="#555">Spring Boot 3.5.x | Java 17 | React 18 | Vite 5 | Material UI | MySQL 8+ | JWT | Azure OpenAI | WebFlux</text>
+</svg>

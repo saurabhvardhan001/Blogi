@@ -1,0 +1,322 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1400 1000">
+  <!-- Title -->
+  <text x="700" y="30" font-size="28" font-weight="bold" text-anchor="middle" fill="#333">
+    Blogi - Low-Level Design (LLD)
+  </text>
+
+  <!-- ===== FRONTEND LAYER ===== -->
+  <rect x="10" y="60" width="320" height="900" fill="#E3F2FD" stroke="#1976D2" stroke-width="2" rx="5"/>
+  <text x="170" y="85" font-size="14" font-weight="bold" text-anchor="middle" fill="#1565C0">
+    FRONTEND (React + MUI)
+  </text>
+
+  <!-- UI Components -->
+  <text x="20" y="110" font-size="11" font-weight="bold" fill="#333">UI Components:</text>
+  
+  <rect x="20" y="125" width="140" height="60" fill="#BBDEFB" stroke="#0D47A1" stroke-width="1" rx="3"/>
+  <text x="90" y="145" font-size="10" font-weight="bold" text-anchor="middle" fill="#0D47A1">App.jsx</text>
+  <text x="90" y="158" font-size="9" text-anchor="middle" fill="#555">Router | NavBar</text>
+  <text x="90" y="170" font-size="9" text-anchor="middle" fill="#555">Auth Check | Routes</text>
+  
+  <rect x="170" y="125" width="140" height="60" fill="#BBDEFB" stroke="#0D47A1" stroke-width="1" rx="3"/>
+  <text x="240" y="145" font-size="10" font-weight="bold" text-anchor="middle" fill="#0D47A1">Login.jsx</text>
+  <text x="240" y="158" font-size="9" text-anchor="middle" fill="#555">TextField inputs</text>
+  <text x="240" y="170" font-size="9" text-anchor="middle" fill="#555">POST /auth/login</text>
+
+  <rect x="20" y="200" width="140" height="60" fill="#BBDEFB" stroke="#0D47A1" stroke-width="1" rx="3"/>
+  <text x="90" y="220" font-size="10" font-weight="bold" text-anchor="middle" fill="#0D47A1">Register.jsx</text>
+  <text x="90" y="233" font-size="9" text-anchor="middle" fill="#555">Register form</text>
+  <text x="90" y="245" font-size="9" text-anchor="middle" fill="#555">POST /auth/register</text>
+
+  <rect x="170" y="200" width="140" height="60" fill="#BBDEFB" stroke="#0D47A1" stroke-width="1" rx="3"/>
+  <text x="240" y="220" font-size="10" font-weight="bold" text-anchor="middle" fill="#0D47A1">Editor.jsx</text>
+  <text x="240" y="233" font-size="9" text-anchor="middle" fill="#555">Form: topic, keywords</text>
+  <text x="240" y="245" font-size="9" text-anchor="middle" fill="#555">tone, audience, length</text>
+
+  <rect x="20" y="275" width="140" height="60" fill="#BBDEFB" stroke="#0D47A1" stroke-width="1" rx="3"/>
+  <text x="90" y="295" font-size="10" font-weight="bold" text-anchor="middle" fill="#0D47A1">History.jsx</text>
+  <text x="90" y="308" font-size="9" text-anchor="middle" fill="#555">List blog posts</text>
+  <text x="90" y="320" font-size="9" text-anchor="middle" fill="#555">GET /api/blog</text>
+
+  <rect x="170" y="275" width="140" height="60" fill="#BBDEFB" stroke="#0D47A1" stroke-width="1" rx="3"/>
+  <text x="240" y="295" font-size="10" font-weight="bold" text-anchor="middle" fill="#0D47A1">MarkdownRenderer.jsx</text>
+  <text x="240" y="308" font-size="9" text-anchor="middle" fill="#555">React Markdown</text>
+  <text x="240" y="320" font-size="9" text-anchor="middle" fill="#555">Syntax Highlight</text>
+
+  <text x="20" y="355" font-size="11" font-weight="bold" fill="#333">Helper Components:</text>
+
+  <rect x="20" y="370" width="90" height="50" fill="#90CAF9" stroke="#0D47A1" stroke-width="1" rx="3"/>
+  <text x="65" y="385" font-size="9" font-weight="bold" text-anchor="middle" fill="#0D47A1">MetaSidebar</text>
+  <text x="65" y="398" font-size="8" text-anchor="middle" fill="#555">SEO scores</text>
+  <text x="65" y="408" font-size="8" text-anchor="middle" fill="#555">Meta info</text>
+
+  <rect x="120" y="370" width="90" height="50" fill="#90CAF9" stroke="#0D47A1" stroke-width="1" rx="3"/>
+  <text x="165" y="385" font-size="9" font-weight="bold" text-anchor="middle" fill="#0D47A1">BlogCard</text>
+  <text x="165" y="398" font-size="8" text-anchor="middle" fill="#555">Card display</text>
+  <text x="165" y="408" font-size="8" text-anchor="middle" fill="#555">keywords</text>
+
+  <rect x="220" y="370" width="90" height="50" fill="#90CAF9" stroke="#0D47A1" stroke-width="1" rx="3"/>
+  <text x="265" y="385" font-size="9" font-weight="bold" text-anchor="middle" fill="#0D47A1">ScorePill</text>
+  <text x="265" y="398" font-size="8" text-anchor="middle" fill="#555">Score display</text>
+  <text x="265" y="408" font-size="8" text-anchor="middle" fill="#555">color scale</text>
+
+  <text x="20" y="445" font-size="11" font-weight="bold" fill="#333">Services:</text>
+
+  <rect x="20" y="460" width="290" height="50" fill="#81C784" stroke="#1B5E20" stroke-width="1" rx="3"/>
+  <text x="165" y="475" font-size="10" font-weight="bold" text-anchor="middle" fill="#1B5E20">api.js</text>
+  <text x="165" y="490" font-size="9" text-anchor="middle" fill="#555">Axios instance | Bearer token header | Base URL: VITE_API_BASE_URL</text>
+
+  <text x="20" y="535" font-size="11" font-weight="bold" fill="#333">Storage & Events:</text>
+
+  <rect x="20" y="550" width="140" height="55" fill="#FFE0B2" stroke="#E65100" stroke-width="1" rx="3"/>
+  <text x="90" y="565" font-size="9" font-weight="bold" text-anchor="middle" fill="#E65100">localStorage</text>
+  <text x="90" y="578" font-size="8" text-anchor="middle" fill="#555">Key: 'token'</text>
+  <text x="90" y="590" font-size="8" text-anchor="middle" fill="#555">Persist JWT</text>
+
+  <rect x="170" y="550" width="140" height="55" fill="#FFE0B2" stroke="#E65100" stroke-width="1" rx="3"/>
+  <text x="240" y="565" font-size="9" font-weight="bold" text-anchor="middle" fill="#E65100">Event Dispatch</text>
+  <text x="240" y="578" font-size="8" text-anchor="middle" fill="#555">'auth:change'</text>
+  <text x="240" y="590" font-size="8" text-anchor="middle" fill="#555">Re-fetch posts</text>
+
+  <text x="20" y="630" font-size="11" font-weight="bold" fill="#333">Libraries:</text>
+  <text x="20" y="650" font-size="9" fill="#555">react-router-dom, axios, material-ui</text>
+  <text x="20" y="667" font-size="9" fill="#555">react-markdown, rehype-sanitize</text>
+  <text x="20" y="684" font-size="9" fill="#555">react-syntax-highlighter, remarkGfm</text>
+
+  <!-- ===== BACKEND LAYER ===== -->
+  <rect x="360" y="60" width="620" height="900" fill="#F3E5F5" stroke="#7B1FA2" stroke-width="2" rx="5"/>
+  <text x="670" y="85" font-size="14" font-weight="bold" text-anchor="middle" fill="#6A1B9A">
+    BACKEND (Spring Boot Java 17)
+  </text>
+
+  <!-- Controllers -->
+  <text x="370" y="115" font-size="12" font-weight="bold" fill="#333">CONTROLLERS:</text>
+
+  <rect x="370" y="130" width="140" height="70" fill="#CE93D8" stroke="#512DA8" stroke-width="1" rx="3"/>
+  <text x="440" y="150" font-size="10" font-weight="bold" text-anchor="middle" fill="#512DA8">AuthController</text>
+  <text x="440" y="163" font-size="8" text-anchor="middle" fill="#555">POST /register</text>
+  <text x="440" y="175" font-size="8" text-anchor="middle" fill="#555">POST /login</text>
+  <text x="440" y="187" font-size="8" text-anchor="middle" fill="#555">@CrossOrigin</text>
+
+  <rect x="530" y="130" width="140" height="70" fill="#CE93D8" stroke="#512DA8" stroke-width="1" rx="3"/>
+  <text x="600" y="150" font-size="10" font-weight="bold" text-anchor="middle" fill="#512DA8">BlogController</text>
+  <text x="600" y="163" font-size="8" text-anchor="middle" fill="#555">POST /generate</text>
+  <text x="600" y="175" font-size="8" text-anchor="middle" fill="#555">GET /list | GET /id</text>
+  <text x="600" y="187" font-size="8" text-anchor="middle" fill="#555">toDto() mapper</text>
+
+  <!-- Services -->
+  <text x="370" y="230" font-size="12" font-weight="bold" fill="#333">SERVICES:</text>
+
+  <rect x="370" y="245" width="100" height="75" fill="#B39DDB" stroke="#4A148C" stroke-width="1" rx="3"/>
+  <text x="420" y="263" font-size="9" font-weight="bold" text-anchor="middle" fill="#4A148C">AuthService</text>
+  <text x="420" y="275" font-size="8" text-anchor="middle" fill="#555">register()</text>
+  <text x="420" y="285" font-size="8" text-anchor="middle" fill="#555">login()</text>
+  <text x="420" y="295" font-size="8" text-anchor="middle" fill="#555">PasswordEncoder</text>
+
+  <rect x="490" y="245" width="100" height="75" fill="#B39DDB" stroke="#4A148C" stroke-width="1" rx="3"/>
+  <text x="540" y="263" font-size="9" font-weight="bold" text-anchor="middle" fill="#4A148C">BlogService</text>
+  <text x="540" y="275" font-size="8" text-anchor="middle" fill="#555">generateAndSave()</text>
+  <text x="540" y="285" font-size="8" text-anchor="middle" fill="#555">buildPrompt()</text>
+  <text x="540" y="295" font-size="8" text-anchor="middle" fill="#555">deriveTitle()</text>
+
+  <rect x="610" y="245" width="100" height="75" fill="#B39DDB" stroke="#4A148C" stroke-width="1" rx="3"/>
+  <text x="660" y="263" font-size="9" font-weight="bold" text-anchor="middle" fill="#4A148C">OpenAIService</text>
+  <text x="660" y="275" font-size="8" text-anchor="middle" fill="#555">generateBlog()</text>
+  <text x="660" y="285" font-size="8" text-anchor="middle" fill="#555">WebClient POST</text>
+  <text x="660" y="295" font-size="8" text-anchor="middle" fill="#555">API response parse</text>
+
+  <rect x="730" y="245" width="100" height="75" fill="#B39DDB" stroke="#4A148C" stroke-width="1" rx="3"/>
+  <text x="780" y="263" font-size="9" font-weight="bold" text-anchor="middle" fill="#4A148C">SeoService</text>
+  <text x="780" y="275" font-size="8" text-anchor="middle" fill="#555">readabilityScore()</text>
+  <text x="780" y="285" font-size="8" text-anchor="middle" fill="#555">seoScore()</text>
+  <text x="780" y="295" font-size="8" text-anchor="middle" fill="#555">metaDescription()</text>
+
+  <rect x="850" y="245" width="100" height="75" fill="#B39DDB" stroke="#4A148C" stroke-width="1" rx="3"/>
+  <text x="900" y="263" font-size="9" font-weight="bold" text-anchor="middle" fill="#4A148C">PlagiarismService</text>
+  <text x="900" y="275" font-size="8" text-anchor="middle" fill="#555">score()</text>
+  <text x="900" y="285" font-size="8" text-anchor="middle" fill="#555">Content analysis</text>
+  <text x="900" y="295" font-size="8" text-anchor="middle" fill="#555">Double score</text>
+
+  <!-- Security Layer -->
+  <text x="370" y="350" font-size="12" font-weight="bold" fill="#333">SECURITY:</text>
+
+  <rect x="370" y="365" width="110" height="75" fill="#81C784" stroke="#1B5E20" stroke-width="1" rx="3"/>
+  <text x="425" y="383" font-size="9" font-weight="bold" text-anchor="middle" fill="#1B5E20">JwtService</text>
+  <text x="425" y="395" font-size="8" text-anchor="middle" fill="#555">generateToken()</text>
+  <text x="425" y="405" font-size="8" text-anchor="middle" fill="#555">extractUsername()</text>
+  <text x="425" y="415" font-size="8" text-anchor="middle" fill="#555">JJWT 0.11.5</text>
+
+  <rect x="500" y="365" width="110" height="75" fill="#81C784" stroke="#1B5E20" stroke-width="1" rx="3"/>
+  <text x="555" y="383" font-size="9" font-weight="bold" text-anchor="middle" fill="#1B5E20">JwtAuthFilter</text>
+  <text x="555" y="395" font-size="8" text-anchor="middle" fill="#555">OncePerRequest</text>
+  <text x="555" y="405" font-size="8" text-anchor="middle" fill="#555">Bearer extraction</text>
+  <text x="555" y="415" font-size="8" text-anchor="middle" fill="#555">Auth setup</text>
+
+  <rect x="630" y="365" width="110" height="75" fill="#81C784" stroke="#1B5E20" stroke-width="1" rx="3"/>
+  <text x="685" y="383" font-size="9" font-weight="bold" text-anchor="middle" fill="#1B5E20">SecurityConfig</text>
+  <text x="685" y="395" font-size="8" text-anchor="middle" fill="#555">CSRF disabled</text>
+  <text x="685" y="405" font-size="8" text-anchor="middle" fill="#555">Stateless (no session)</text>
+  <text x="685" y="415" font-size="8" text-anchor="middle" fill="#555">CORS enabled</text>
+
+  <rect x="760" y="365" width="110" height="75" fill="#81C784" stroke="#1B5E20" stroke-width="1" rx="3"/>
+  <text x="815" y="383" font-size="9" font-weight="bold" text-anchor="middle" fill="#1B5E20">AppUserDetailsService</text>
+  <text x="815" y="395" font-size="8" text-anchor="middle" fill="#555">loadUserByUsername()</text>
+  <text x="815" y="405" font-size="8" text-anchor="middle" fill="#555">User → UserDetails</text>
+  <text x="815" y="415" font-size="8" text-anchor="middle" fill="#555">Role mapping</text>
+
+  <rect x="890" y="365" width="80" height="75" fill="#81C784" stroke="#1B5E20" stroke-width="1" rx="3"/>
+  <text x="930" y="383" font-size="9" font-weight="bold" text-anchor="middle" fill="#1B5E20">BCrypt</text>
+  <text x="930" y="395" font-size="8" text-anchor="middle" fill="#555">Encode pwd</text>
+  <text x="930" y="405" font-size="8" text-anchor="middle" fill="#555">Verify pwd</text>
+  <text x="930" y="415" font-size="8" text-anchor="middle" fill="#555">PasswordEncoder</text>
+
+  <!-- Repositories/DAOs -->
+  <text x="370" y="480" font-size="12" font-weight="bold" fill="#333">REPOSITORIES (JPA):</text>
+
+  <rect x="370" y="495" width="140" height="65" fill="#FFB74D" stroke="#E65100" stroke-width="1" rx="3"/>
+  <text x="440" y="513" font-size="9" font-weight="bold" text-anchor="middle" fill="#E65100">UserRepository</text>
+  <text x="440" y="525" font-size="8" text-anchor="middle" fill="#555">findByUsername()</text>
+  <text x="440" y="535" font-size="8" text-anchor="middle" fill="#555">existsByUsername/Email</text>
+
+  <rect x="530" y="495" width="140" height="65" fill="#FFB74D" stroke="#E65100" stroke-width="1" rx="3"/>
+  <text x="600" y="513" font-size="9" font-weight="bold" text-anchor="middle" fill="#E65100">BlogRepository</text>
+  <text x="600" y="525" font-size="8" text-anchor="middle" fill="#555">findById()</text>
+  <text x="600" y="535" font-size="8" text-anchor="middle" fill="#555">findPostsByAuthorId()</text>
+
+  <!-- DTOs/Entities -->
+  <text x="370" y="600" font-size="12" font-weight="bold" fill="#333">DTOs:</text>
+  <rect x="370" y="615" width="100" height="55" fill="#A1887F" stroke="#3E2723" stroke-width="1" rx="3"/>
+  <text x="420" y="630" font-size="8" font-weight="bold" text-anchor="middle" fill="#3E2723">AuthRequest</text>
+  <text x="420" y="642" font-size="7" text-anchor="middle" fill="#555">username, email</text>
+  <text x="420" y="652" font-size="7" text-anchor="middle" fill="#555">password</text>
+
+  <rect x="490" y="615" width="100" height="55" fill="#A1887F" stroke="#3E2723" stroke-width="1" rx="3"/>
+  <text x="540" y="630" font-size="8" font-weight="bold" text-anchor="middle" fill="#3E2723">LoginRequest</text>
+  <text x="540" y="642" font-size="7" text-anchor="middle" fill="#555">username</text>
+  <text x="540" y="652" font-size="7" text-anchor="middle" fill="#555">password</text>
+
+  <rect x="610" y="615" width="100" height="55" fill="#A1887F" stroke="#3E2723" stroke-width="1" rx="3"/>
+  <text x="660" y="630" font-size="8" font-weight="bold" text-anchor="middle" fill="#3E2723">GenerateRequest</text>
+  <text x="660" y="642" font-size="7" text-anchor="middle" fill="#555">topic, keywords[]</text>
+  <text x="660" y="652" font-size="7" text-anchor="middle" fill="#555">tone, audience, length</text>
+
+  <rect x="730" y="615" width="100" height="55" fill="#A1887F" stroke="#3E2723" stroke-width="1" rx="3"/>
+  <text x="780" y="630" font-size="8" font-weight="bold" text-anchor="middle" fill="#3E2723">BlogResponse</text>
+  <text x="780" y="642" font-size="7" text-anchor="middle" fill="#555">id, title, content</text>
+  <text x="780" y="652" font-size="7" text-anchor="middle" fill="#555">scores, meta*</text>
+
+  <rect x="850" y="615" width="100" height="55" fill="#A1887F" stroke="#3E2723" stroke-width="1" rx="3"/>
+  <text x="900" y="630" font-size="8" font-weight="bold" text-anchor="middle" fill="#3E2723">AuthResponse</text>
+  <text x="900" y="642" font-size="7" text-anchor="middle" fill="#555">token</text>
+  <text x="900" y="652" font-size="7" text-anchor="middle" fill="#555">username</text>
+
+  <text x="370" y="705" font-size="12" font-weight="bold" fill="#333">ENTITIES:</text>
+  <rect x="370" y="720" width="120" height="70" fill="#64B5F6" stroke="#0D47A1" stroke-width="1" rx="3"/>
+  <text x="430" y="738" font-size="9" font-weight="bold" text-anchor="middle" fill="#0D47A1">User</text>
+  <text x="430" y="750" font-size="7" text-anchor="middle" fill="#555">id, username, email</text>
+  <text x="430" y="760" font-size="7" text-anchor="middle" fill="#555">password, roles[]</text>
+  <text x="430" y="770" font-size="7" text-anchor="middle" fill="#555">1-N → BlogPost</text>
+
+  <rect x="510" y="720" width="130" height="70" fill="#64B5F6" stroke="#0D47A1" stroke-width="1" rx="3"/>
+  <text x="575" y="738" font-size="9" font-weight="bold" text-anchor="middle" fill="#0D47A1">BlogPost</text>
+  <text x="575" y="750" font-size="7" text-anchor="middle" fill="#555">id, title, content</text>
+  <text x="575" y="760" font-size="7" text-anchor="middle" fill="#555">meta*, scores*, keywords[]</text>
+  <text x="575" y="770" font-size="7" text-anchor="middle" fill="#555">author_id (FK), timestamps</text>
+
+  <text x="370" y="825" font-size="12" font-weight="bold" fill="#333">EXCEPTION HANDLING:</text>
+  <rect x="370" y="840" width="270" height="35" fill="#EF9A9A" stroke="#C62828" stroke-width="1" rx="3"/>
+  <text x="505" y="858" font-size="9" font-weight="bold" text-anchor="middle" fill="#C62828">GlobalExceptionHandler</text>
+  <text x="505" y="870" font-size="8" text-anchor="middle" fill="#555">BadRequestException | NotFoundException | Custom Exceptions</text>
+
+  <!-- ===== DATABASE LAYER ===== -->
+  <rect x="1010" y="60" width="370" height="900" fill="#FCE4EC" stroke="#C2185B" stroke-width="2" rx="5"/>
+  <text x="1195" y="85" font-size="14" font-weight="bold" text-anchor="middle" fill="#880E4F">
+    DATABASE (MySQL 8+)
+  </text>
+
+  <text x="1020" y="115" font-size="12" font-weight="bold" fill="#333">TABLES:</text>
+
+  <!-- users table -->
+  <rect x="1020" y="130" width="170" height="130" fill="#F8BBD0" stroke="#C2185B" stroke-width="1" rx="3"/>
+  <text x="1105" y="150" font-size="10" font-weight="bold" text-anchor="middle" fill="#C2185B">users</text>
+  <text x="1105" y="168" font-size="8" text-anchor="middle" fill="#555">id (PK, auto)</text>
+  <text x="1105" y="178" font-size="8" text-anchor="middle" fill="#555">username (UNIQUE)</text>
+  <text x="1105" y="188" font-size="8" text-anchor="middle" fill="#555">email (UNIQUE)</text>
+  <text x="1105" y="198" font-size="8" text-anchor="middle" fill="#555">password (NOT NULL)</text>
+  <text x="1105" y="208" font-size="8" text-anchor="middle" fill="#555">roles (ElementCollection)</text>
+  <text x="1105" y="218" font-size="8" text-anchor="middle" fill="#555">JOIN: user_roles table</text>
+  <text x="1105" y="228" font-size="8" text-anchor="middle" fill="#555">1-N → blog_posts</text>
+
+  <!-- blog_posts table -->
+  <rect x="1210" y="130" width="160" height="200" fill="#F8BBD0" stroke="#C2185B" stroke-width="1" rx="3"/>
+  <text x="1290" y="150" font-size="10" font-weight="bold" text-anchor="middle" fill="#C2185B">blog_posts</text>
+  <text x="1290" y="168" font-size="8" text-anchor="middle" fill="#555">id (PK, auto)</text>
+  <text x="1290" y="178" font-size="8" text-anchor="middle" fill="#555">title</text>
+  <text x="1290" y="188" font-size="8" text-anchor="middle" fill="#555">content (LONGTEXT)</text>
+  <text x="1290" y="198" font-size="8" text-anchor="middle" fill="#555">metaTitle</text>
+  <text x="1290" y="208" font-size="8" text-anchor="middle" fill="#555">metaDescription (500)</text>
+  <text x="1290" y="218" font-size="8" text-anchor="middle" fill="#555">readabilityScore (int)</text>
+  <text x="1290" y="228" font-size="8" text-anchor="middle" fill="#555">seoScore (double)</text>
+  <text x="1290" y="238" font-size="8" text-anchor="middle" fill="#555">plagiarismScore (double)</text>
+  <text x="1290" y="248" font-size="8" text-anchor="middle" fill="#555">createdAt | updatedAt</text>
+  <text x="1290" y="258" font-size="8" text-anchor="middle" fill="#555">author_id (FK)</text>
+  <text x="1290" y="268" font-size="8" text-anchor="middle" fill="#555">1-N → blog_keywords</text>
+
+  <!-- blog_keywords table -->
+  <rect x="1020" y="290" width="160" height="85" fill="#F8BBD0" stroke="#C2185B" stroke-width="1" rx="3"/>
+  <text x="1100" y="310" font-size="10" font-weight="bold" text-anchor="middle" fill="#C2185B">blog_keywords</text>
+  <text x="1100" y="328" font-size="8" text-anchor="middle" fill="#555">blog_id (FK)</text>
+  <text x="1100" y="338" font-size="8" text-anchor="middle" fill="#555">keyword (String)</text>
+  <text x="1100" y="348" font-size="8" text-anchor="middle" fill="#555">ElementCollection</text>
+  <text x="1100" y="358" font-size="8" text-anchor="middle" fill="#555">JOIN table for keywords[]</text>
+
+  <!-- user_roles table -->
+  <rect x="1210" y="360" width="160" height="85" fill="#F8BBD0" stroke="#C2185B" stroke-width="1" rx="3"/>
+  <text x="1290" y="380" font-size="10" font-weight="bold" text-anchor="middle" fill="#C2185B">user_roles</text>
+  <text x="1290" y="398" font-size="8" text-anchor="middle" fill="#555">user_id (FK)</text>
+  <text x="1290" y="408" font-size="8" text-anchor="middle" fill="#555">role (String)</text>
+  <text x="1290" y="418" font-size="8" text-anchor="middle" fill="#555">ElementCollection</text>
+  <text x="1290" y="428" font-size="8" text-anchor="middle" fill="#555">JOIN table for roles[]</text>
+
+  <!-- Configuration -->
+  <text x="1020" y="490" font-size="12" font-weight="bold" fill="#333">CONFIG (application.properties):</text>
+  <rect x="1020" y="505" width="350" height="90" fill="#FFCCBC" stroke="#BF360C" stroke-width="1" rx="3"/>
+  <text x="1200" y="525" font-size="8" font-weight="bold" text-anchor="middle" fill="#BF360C">Database</text>
+  <text x="1200" y="538" font-size="7" text-anchor="middle" fill="#555">spring.datasource.url=jdbc:mysql://localhost:3306/blogi</text>
+  <text x="1200" y="548" font-size="7" text-anchor="middle" fill="#555">spring.jpa.hibernate.ddl-auto=update</text>
+  <text x="1200" y="558" font-size="7" text-anchor="middle" fill="#555">JWT_SECRET, AZURE_OPENAI_* (env vars)</text>
+  <text x="1200" y="568" font-size="7" text-anchor="middle" fill="#555">jwt.expiration=86400000 (24 hours)</text>
+  <text x="1200" y="578" font-size="7" text-anchor="middle" fill="#555">azure.openai.api-version=2024-02-15-preview</text>
+
+  <!-- Data Flow Arrows -->
+  <defs>
+    <marker id="arrow" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#333" />
+    </marker>
+    <marker id="arrowBlue2" markerWidth="10" markerHeight="10" refX="9" refY="3" orient="auto" markerUnits="strokeWidth">
+      <path d="M0,0 L0,6 L9,3 z" fill="#1976D2" />
+    </marker>
+  </defs>
+
+  <!-- Frontend to Backend -->
+  <path d="M 330 200 L 360 200" stroke="#1976D2" stroke-width="2" fill="none" marker-end="url(#arrowBlue2)"/>
+  <text x="345" y="190" font-size="9" fill="#1976D2" font-weight="bold">HTTP</text>
+
+  <!-- Backend to Database -->
+  <path d="M 980 400 L 1010 400" stroke="#C2185B" stroke-width="2" fill="none" marker-end="url(#arrow)"/>
+  <text x="995" y="390" font-size="9" fill="#C2185B" font-weight="bold">JDBC</text>
+
+  <!-- Notes -->
+  <text x="1020" y="650" font-size="11" font-weight="bold" fill="#333">CONNECTION FLOW:</text>
+  <rect x="1020" y="665" width="350" height="85" fill="#E0F2F1" stroke="#00695C" stroke-width="1" rx="3"/>
+  <text x="1200" y="683" font-size="9" font-weight="bold" text-anchor="middle" fill="#00695C">Spring Boot (8080) ← React (5173)</text>
+  <text x="1200" y="698" font-size="8" text-anchor="middle" fill="#555">Bearer JWT in Authorization header</text>
+  <text x="1200" y="710" font-size="8" text-anchor="middle" fill="#555">JwtAuthFilter validates every request (except /auth/*)</text>
+  <text x="1200" y="722" font-size="8" text-anchor="middle" fill="#555">Spring Data JPA → MySQL (JDBC Driver)</text>
+  <text x="1200" y="734" font-size="8" text-anchor="middle" fill="#555">WebClient → Azure OpenAI (REST)</text>
+
+  <text x="1020" y="790" font-size="11" font-weight="bold" fill="#333">KEY DEPENDENCIES:</text>
+  <text x="1020" y="810" font-size="8" fill="#555">Spring Boot 3.5.6 | Spring Security | Spring Data JPA | Spring WebFlux | MySQL Connector</text>
+  <text x="1020" y="825" font-size="8" fill="#555">JJWT 0.11.5 (JWT) | Spring Validation | BCrypt Password Encoding</text>
+  <text x="1020" y="840" font-size="8" fill="#555">Maven Build | Java 17 | Stateless Auth | CORS Enabled</text>
+</svg>
